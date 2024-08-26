@@ -82,8 +82,8 @@ export class NgxPendoService {
    * Checks if a given visitor id string is anonymous.
    * If no argument is given, calls with pendo.getVisitorId() to check current visitor status.
    */
-  isAnonymousVisitor(visitorId?: string): void {
-    this.pendo?.isAnonymousVisitor(visitorId);
+  isAnonymousVisitor(visitorId?: string): boolean {
+    return this.pendo?.isAnonymousVisitor(visitorId);
   }
 
   /**
