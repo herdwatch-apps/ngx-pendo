@@ -24,6 +24,10 @@ export function pendoInitializer($settings: IPendoSettings, window: PendoWindow)
       return;
     }
 
+    if (localStorage.getItem('ngx-pendo-block-script')) {
+      return;
+    }
+
     await new Promise<void>(resolve => {
       const script = document.createElement('script');
       script.async = true;

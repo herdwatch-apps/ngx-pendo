@@ -70,6 +70,12 @@ describe('NgxPendoService', () => {
     service.teardown();
     expect(spyOnPendo.teardown).toHaveBeenCalledOnceWith();
 
+    service.isAnonymousVisitor();
+    expect(spyOnPendo.isAnonymousVisitor).toHaveBeenCalledOnceWith();
+
+    service.clearSession();
+    expect(spyOnPendo.clearSession).toHaveBeenCalledOnceWith();
+
     service.enableDebugging();
     expect(spyOnPendo.enableDebugging).toHaveBeenCalledOnceWith();
 
